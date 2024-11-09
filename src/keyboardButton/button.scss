@@ -1,0 +1,12 @@
+.buttonContainer {
+  .button {
+    // ... существующие стили ...
+
+    &:active {
+      // Применяем стили только при нажатии на кнопку
+      transition: all 0.1s ease;
+      box-shadow: inset 0 1px 5px rgba(29, 26, 26, 0.6);
+      transform: scale(0.98);
+    }
+  }
+} 
