@@ -10,7 +10,7 @@ const KeyboardButton = () => {
 
   return (
     <div className={styles.buttonContainerAll}>
-      <button title="1" className={`${styles.buttonContainer} ${isActive ? styles.active : ''}`} onClick={handleClick}>
+      <button title="i made it for 4 hours" className={`${styles.buttonContainer} ${isActive ? styles.active : ''}`} onClick={handleClick}>
         <div className={`${styles.button} ${isActive ? styles.active : ''}`}>
           <div className={styles.buttonPressZone}>
             <div className={styles.buttonImageContainer}>
