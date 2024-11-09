@@ -17,9 +17,12 @@
   border: none;
   border-radius: 24px;
   cursor: pointer;
-
+  transition: all 0.1s ease;
   &.active {
     // background-color: rgb(18, 19, 21);
+    // box-shadow: inset 1px 1px 1px 1px rgba(12, 89, 255, 0.3);
+    transition: all 0.1s ease;
+    // filter: drop-shadow(0 -3mm 4mm rgba(9, 64, 167, 0.1));
   }
 }
 
@@ -50,20 +53,22 @@
 
 /* зона нажатия кнопки */
 .buttonPressZone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 86px;
   height: 86px;
   margin-top: 5px;
   background-image: linear-gradient(
     to bottom,
-    rgb(28, 29, 31) 0%,
-    rgb(45, 46, 48) 85%,
-    rgb(50, 51, 53) 90%,
+    rgb(22, 22, 24) 0%,
+    rgb(45, 46, 48) 60%,
     rgb(60, 61, 63) 100%
   );
   border: 1px solid rgb(50, 51, 53);
   border-radius: 20px;
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2), 
-    inset 0 -1px 2px rgba(255, 255, 255, 0.1);
+    inset 0 -4px 2px rgba(255, 255, 255, 0.01);
 
   &.active {
     background-image: linear-gradient(
@@ -82,7 +87,7 @@
   position: relative;
   width: 5px;
   height: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: rgb(61, 61, 61);
   border-radius: 50%;
   transition: all 0.1s ease;
@@ -90,5 +95,36 @@
   &.active {
     background-color: rgb(65, 233, 246);
     box-shadow: 0 0 15px 8px rgba(13, 57, 185, 0.5);
+  }
+}
+
+.buttonImage {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  color: rgb(22, 23, 24);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    right: 7px;
+    width: 4px;
+    height: 4px;
+    transform: translate(50%, -50%);
+    background-color: rgb(22, 23, 24);
+    border-radius: 20px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 7px;
+    width: 4px;
+    height: 4px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(22, 23, 24);
+    border-radius: 20px;
   }
 }
